@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Bluetooth</string>
+    <string name="activate">Activer</string>
+    <string name="deactivate">désactiver</string>
+    <string name="setting">Régler</string>
+    <string name="connect">Connecter</string>
+    <string name="connected">Connecté</string>
+
+
+
 </resources>

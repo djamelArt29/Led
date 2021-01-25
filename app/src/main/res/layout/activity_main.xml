@@ -9,92 +9,103 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBluethoothstate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/tvLampState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" " />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="val 1 : "
-                android:textSize="25sp" />
-
-            <EditText
-                android:id="@+id/eTVal1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="0"
-                android:inputType="number"
-                android:textSize="25sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="val 2 : "
-                android:textSize="25sp" />
-
-            <EditText
-                android:id="@+id/etVal2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="0"
-                android:inputType="number"
-                android:textSize="25sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Result: "
-                android:textSize="25sp" />
-
-            <TextView
-                android:id="@+id/tVResult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="0"
-                android:textColor="#F30B0B"
-                android:textSize="25sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnSum"
+                android:id="@+id/btnBlue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="sum" />
+                android:background="@drawable/buttoncolor"
+                android:onClick="blueLed"
+                android:text="BLUE"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/buttoncolor"
+                android:onClick="redLed"
+                android:text="Red"
+                android:textColor="@color/black"
+                app:backgroundTint="#B62D2D" />
+
+            <Button
+                android:id="@+id/btnYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/buttoncolor"
+                android:onClick="YellowLed"
+                android:text="Yellow"
+                android:textColor="@color/black"
+                app:backgroundTint="#FFC107" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/buttoncolor"
+                android:onClick="sendvalue"
+                android:text="Send"
+                android:textColor="@color/black"
+                app:backgroundTint="#757272" />
 
         </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnOff"
+                app:srcCompat="@drawable/btn_off" />
+
+            <ImageView
+                android:id="@+id/ivOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btnOn"
+                app:srcCompat="@drawable/btn_on" />
+        </FrameLayout>
 
     </LinearLayout>
 
